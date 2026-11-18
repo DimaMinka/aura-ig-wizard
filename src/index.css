@@ -13,7 +13,7 @@
   body {
     overscroll-behavior-y: none;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   
   /* Native dialog modern styling & scroll containment */
