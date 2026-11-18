@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# Aura IG — Mobile AI Agent Wizard ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Интерактивный **Mobile-First** интерфейс (`390×844` / `max-w-[430px]`) для управления взаимной активностью в Instagram в эстетике **Rose Quartz & Champagne Gold**.
 
-Currently, two official plugins are available:
+Создан на базе прототипов Google Stitch и интегрирован с архитектурой backend-агента `ig-engagement-agent` (контроль безопасности `safety_guard.py`, очередь `fetch_telegram.py`, открытки взаимности `card_renderer.py` и ROI-радар `chat_ranker.py`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📱 Экраны и сценарии
 
-## React Compiler
+1. **✨ Визард (Главный хаб)**: Сводка очереди заданий (Heavy/Light), управление безопасными пачками HITL, сбор данных за 24 часа и сетка сценариев.
+2. **🚀 Посев & ИИ**: Пошаговый мастер подготовки Reels (ввод ссылки, проверка чатов на спам-фильтры, закрытие встречных долгов и планирование).
+3. **💖 Взаимность (Ghost Auditor)**: Метрики взаимности (CR%, долги, отдача), список участников со статусами и брендовая открытка-отчёт для шеринга в чат.
+4. **💎 Чаты & Радар**: Ритм аккаунта (лимиты 1ч/24ч), ROI-рейтинг чатов с индикаторами отдачи и семантический радар тем с детекцией накруток.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Технологический стек
 
-## Expanding the Oxlint configuration
+- **Фреймворк**: React 19 + TypeScript + Vite
+- **Стилизация**: Tailwind CSS (кастомная палитра `rose-gold` + точные дизайн-токены Stitch)
+- **Шрифты с полной поддержкой кириллицы**: `Playfair Display` (заголовки) + `Manrope` (интерфейс)
+- **Иконки**: Google Material Symbols Outlined
+- **Архитектура сервисов**: Переключение на лету между `MockAgentService` (автономный режим) и `LiveAgentService` (REST API к агенту)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🚀 Локальный запуск
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск dev-сервера
+npm run dev
+
+# Проверка лимитов строк (<= 120 строк на компонент)
+npm run check:lines
+
+# Сборка проекта
+npm run build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🌐 Развёртывание
+
+Сайт автоматически собирается и публикуется на GitHub Pages через GitHub Actions при пуше в ветку `main`.
