@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" width="320" height="420">
+  <defs>
+    <linearGradient id="reels_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8c4e35" />
+      <stop offset="50%" stop-color="#e29578" />
+      <stop offset="100%" stop-color="#ffe088" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="24" fill="url(#reels_bg)" />
+  <rect x="16" y="16" width="288" height="388" rx="16" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+  <!-- Play Icon -->
+  <circle cx="160" cy="180" r="36" fill="rgba(255,255,255,0.85)" />
+  <polygon points="152,164 174,180 152,196" fill="#8c4e35" />
+  <text x="160" y="250" font-family="'Bodoni Moda', serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">Эстетика утра</text>
+  <text x="160" y="274" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="500" fill="#ffdbce" text-anchor="middle">Reels • 0:28 мин</text>
+</svg>
